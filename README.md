@@ -14,5 +14,5 @@ npm i json-server
 
 1. Goto the project directory. 
 2. on the same directory run below commands:
-   -> json-server --watch laptops.json  (this will available laptop json on some port and it will behave like fake server)
+   -> json-server --watch sunglasses.json  (this will available laptop json on some port and it will behave like fake server)
    -> ng serve  (this will run your Angular project on port 4200)
