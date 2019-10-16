@@ -1,0 +1,23 @@
+.container {
+    padding: 0px 20px;
+}
+.box{
+    padding: 10px;
+    background: #fff;
+    box-shadow: 0 0 2px rgba(0,0,0,0.2);
+}
+
+.form-box{
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    flex-wrap: wrap;
+}
+.form-box mat-form-field{
+    flex: 1;
+    margin-right: 10px;
+}
+
+.address-form{
+    margin-top: 20px;
+}

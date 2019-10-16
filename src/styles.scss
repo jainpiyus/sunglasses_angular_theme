@@ -1,0 +1,254 @@
+/* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons+Outlined");
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+$font-primary: 'Open Sans',Arial, sans-serif;
+
+$white: #fff;
+$black: #000000;
+// $darken: #3a4348;
+
+$primary: #dbcc8f;
+body{
+    padding: 0;
+    margin: 0;
+    font-family: "Open Sans", Arial, sans-serif;
+	background: $white;
+	font-size: 15px;
+	line-height: 1.8;
+	font-weight: 400;
+    color: black;
+    letter-spacing: 0.5px;
+    background: #f8f9fa;
+}
+p {
+    font-size: 14px;
+}
+span{
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.button{
+  border-radius: 0 !important;
+  border-color: #000000 !important;
+  transition: all 0.3s ease 0s;
+  color: #000000;
+}
+.button:hover {
+    background-color: #000000;
+    color: white;
+}
+
+mat-icon{
+    color: #000000;
+    cursor: pointer;
+}
+mat-icon:active,hover{
+    outline: none;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+
+a:hover{
+    color: #000000;
+}
+
+.active {
+    color: #000000;
+    outline: none;
+}
+
+
+.flex-box{
+    background: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 10px 10%; 
+  }
+  .flex-box-transparent{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0;
+    padding: 10px 10%; 
+  }
+  .free-box{
+    background: #fff;
+    padding: 10px;
+  }
+  .message-box{
+    align-items: normal;
+  }
+  .message-box:hover{
+    background: #f5faff;
+  }
+
+
+  mat-card {
+      box-shadow: none !important;
+      //border: 1px solid #75890c !important;
+      transition: 0.3s !important;
+      width: 250px !important;
+      margin: 10px 10px !important;
+      cursor: pointer !important;
+      position: relative;
+      overflow: hidden;
+    .fab {
+        z-index: 0;
+        position: absolute;
+    }
+
+  }
+
+
+  mat-card img{
+      padding-bottom: 0px !important;
+      transition: 0.3s !important;
+  }
+ 
+  mat-card img:hover{
+      border: #fff !important;
+      transform: scale(1.1);
+      z-index: 2;
+  }
+  mat-card:hover{
+      .fab {
+          z-index: 2;
+          display: flex;
+        flex-direction: row-reverse;
+        width: 90%; 
+      }
+  }
+  .skltn-card {
+    margin: 20px 0 48px;
+  }
+  .skltn-card__avatar {
+    width: 60px;
+    height: 60px; /* <-- Don't forget height */
+    margin-bottom: 20px;
+  }
+  .skltn-card__title {
+    height: 32px;
+    margin-bottom: 20px;
+  }
+  .skltn-card__line {
+    height: 20px;
+    margin-bottom: 20px;
+  }
+  .skltn-card__line:last-child {
+    width: 60%;
+  }
+  .dark-background{
+    background: #000000 !important;
+  }
+  .white-color{
+    color: #fff !important;
+  }
+  .black-color{
+    color: #000000 !important;
+  }
+  .cursor{
+    cursor: pointer;
+  }
+  .onLoad
+  {
+      -webkit-animation:bounceIn 2s;
+  }
+  .fadeIn{
+    -webkit-animation:fadeIn 1.5s;
+  }
+  .no-padding{
+    padding: 0;
+}
+.no-margin{
+    margin: 0;
+}
+.padding-horizontaly{
+    padding: 0px 20px;
+}
+.padding {
+    padding: 20px;
+}
+.small-padding{
+    padding: 10px;
+}
+.micro-gap{
+    width: 5px;
+}
+.very-small-gap{
+    width: 10px;
+}
+.small-gap{
+    width: 20px;
+}
+.medium-gap{
+    width: 40px;
+}
+.large-gap{
+    width: 60px;
+}
+.very-large-gap{
+    width: 80px;;
+}
+.success{
+    color: rgb(62, 153, 32);
+}
+.full-height{
+    height: 100%;
+}
+.full-width{
+    width: 100%;
+}
+.flex-item-center{
+    display: flex;
+    align-items: center;
+}
+.reverse-flex{
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+}
+.flex-column{
+    display: flex;
+    flex-direction: column;
+}
+.flex-with-space-between{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.flext1{
+    flex: 1;
+}
+.flext2{
+    flex: 2;
+}
+.flext3{
+    flex: 3;
+}
+.flext4{
+    flex: 4;
+}
+
+.white-background{
+    background: #fff;
+}
+.success-background{
+    background: black;
+    color: white;
+}
+button{
+    border-radius: 0 !important;
+}
+.mat-select-value{
+    text-align: center !important;
+}
+
+.pointer{
+    cursor: pointer;
+}

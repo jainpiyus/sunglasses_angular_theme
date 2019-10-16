@@ -1,0 +1,78 @@
+<div class="cart-box">
+    <p class="cart-title">Your Shopping Cart</p>
+    <button mat-button mat-raised-button class="checkout-btn">CHECKOUT</button>
+</div>
+<div style="background:white;">
+    <div *ngFor="let item of cart" class="item-box">
+        <img class="productImg" src="{{item.image}}" alt="Photo of a Shiba Inu">
+        <span class="item-id">JP{{item.id}}</span>
+        <!-- <span>selection</span> -->
+        <mat-form-field style="width: 60px; background: rgb(246, 246, 246);" color="dark">
+            <mat-select>
+                <mat-option *ngFor="let item of quantity" [value]="item.value"
+                    style="margin-left: 5px !important;">
+                    {{item.viewValue}}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+        <span style="font-weight: 700; font-size: 1.5rem;"><img height="17px" width="17px" src="data:image/png;base64,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">
+            {{item.price}}</span>
+        <span class="remove">×</span>
+    </div>
+    <div class="discount-box">
+        <div class="pair-box">
+            <img style="margin-right: 12px;" src="https://cdn.shopify.com/s/files/1/1276/5299/files/gift.png?15863254011827046694">
+            <h3>
+                ADD YOUR SECOND PAIR AT Rs. 1300
+            </h3>
+        </div>
+        <div style="display:flex; justify-content:center">
+            <button class="discount_cart_btn">Add your Second Pair</button>
+        </div>
+    </div>
+    <div class="total-box">
+        <div class="discount-code-box">
+            <span style="font-size: 16px; font-weight:500">Discount Code:</span>
+            <div>
+                <input type="text" name="" class="discount_input">
+                <a style="color:white; font-weight: 400; padding: 9px 9px;" class="apply-btn checkout-btn">APPLY</a>
+            </div>
+            <span style="color:#9fd4ca; font-size: 15px;">Successfully Applied</span>
+        </div>
+        <div class="final-cost">
+            <label class="cost-text">YOUR FINAL COST</label>
+            <span style="font-weight: 700; font-size: 14px;">#NoPretence</span>
+            <div style="display: flex;">
+                <div style="border: 1px solid black;">
+                    <span class="exclude-text">EXCLUDES</span>
+                    <ul class="exclude-list">
+                        <li><span>UNFAIR MARKUPS</span></li>
+                        <li><span>FANCY LABEL SURCHARGE</span></li>
+                        <li><span>SURPRISE</span></li>
+                    </ul>
+                </div>
+                <div class="include-border">
+                    <span class="exclude-text">INCLUDES</span>
+                    <ul class="exclude-list">
+                        <li><span>BASIC MARGINS</span></li>
+                        <li><span>PREMIUM OFFER</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="table-box">
+            <span style="font-size: 16px;font-weight: 700; color:black">2nd FRAME DISCOUNT APPLIED</span>
+            <div><span>2nd Frame Discount</span><span class="price">3,400</span></div>
+            <div><span>Subtota</span><span class="price">13,650</span></div>
+            <div><span>Discount : JJ500</span><span class="price">750</span></div>
+            <div><span>Taxes</span><span class="price">1,542</span></div>
+            <div><span>Free Shipping in India.</span></div>
+            <div class="total-text">
+                <span style="font-size: 16px;font-weight: 700; color:black">Total</span>
+                <span style="font-size: 16px;font-weight: 700; color:black" class="price">14,392</span>
+            </div>
+        </div>
+    </div>
+
+   
+</div>

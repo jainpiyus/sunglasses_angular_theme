@@ -1,0 +1,9 @@
+<mat-drawer-container hasBackdrop="true" >
+
+    <mat-drawer #drawer class="example-sidenav" mode="over" style=" overflow: hidden;">
+        <app-sidenav (sidenav)="toggelNavbar($event)"></app-sidenav>
+    </mat-drawer>
+    <app-header (sidenav)="toggelNavbar($event)"></app-header>
+    <router-outlet></router-outlet>
+    <app-footer></app-footer>
+</mat-drawer-container>

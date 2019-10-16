@@ -1,0 +1,33 @@
+.footer{
+    background: black;
+    color: white;
+}
+.footer .container {
+    margin-top: 40px;
+    padding: 40px 0px 0px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.first {
+    flex: 1;
+}
+
+.second {
+    flex: 1;
+    text-align: center;
+}
+
+
+.third {
+    flex: 1;
+}
+.footer .copyright {
+    margin-top: 20px;
+    text-align: center;
+}
+.list {
+    list-style: none;
+    text-align: center;
+    font-size: 12px;
+}

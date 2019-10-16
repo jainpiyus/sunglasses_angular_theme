@@ -1,0 +1,180 @@
+<div style="padding: 30px 0px;  background: rgb(224, 224, 223);">
+        <div class="filter-box" style="display:flex">
+                <div class="first">EYEGLASSES-FOR-MEN-335 PRODUCTS</div>
+                <div class="advance-filter">
+                    <span class="right-border cursor" (click)="showOption('shape')">SHAPE</span> <div class="vertical-line">A</div>
+                    <span class="right-border cursor" (click)="showOption('size')">SIZE</span><div class="vertical-line">A</div>
+                    <span class="right-border cursor" (click)="showOption('color')">COLOR</span><div class="vertical-line">A</div>
+                    <span class="cursor" (click)="showOption('price')">PRICE</span>
+                </div>
+            </div>
+            <div *ngIf="showFilter || applyFilter" >
+                <div style="display:flex;" class="filter-box ">
+                        <div *ngIf="preserveFilterName=='shape'" class="filter-option fadeIn">
+                                <ul class="filter-list">
+                                    <li><input type="checkbox"></li><span>Rectangle</span>
+                                    <li><input type="checkbox"></li><span>Cat Eye</span>
+                                    <li><input type="checkbox"></li><span>Wayfarer</span>
+                                    <li><input type="checkbox"></li><span>Aviator</span>
+                                    <li><input type="checkbox"></li><span>Round</span>
+                                    <li><input type="checkbox"></li><span>Clubmaster</span>
+                                </ul>
+                            </div>
+                            <div *ngIf="preserveFilterName=='size'" class="filter-option fadeIn">
+                                <ul class="filter-list">
+                                    <li><input type="checkbox"></li><span>Small</span>
+                                    <li><input type="checkbox"></li><span>Medium</span>
+                                    <li><input type="checkbox"></li><span>Large</span>
+                                </ul>
+                            </div>
+                            <div *ngIf="preserveFilterName=='color'" class="filter-option fadeIn">
+                                <ul class="filter-list">
+                                    <li class="color-item" style="background-color:black; border-color: black; margin-right: 5px;"></li><a class="mg-20">Black</a><input class="color-check" style="margin-right: 20px;" type="checkbox">
+                                    <li class="color-item" style="background-color:grey; border-color: grey; margin-right: 5px;"></li><a class="mg-20">Grey</a><input class="color-check" style="margin-right: 20px;" type="checkbox">
+                                    <li class="color-item" style="background-color: pink; border-color: pink; margin-right: 5px;"></li><a class="mg-20">Pink</a><input class="color-check" style="margin-right: 20px;" type="checkbox">
+                                    <li class="color-item" style="background-color: silver; border-color: silver; margin-right: 5px;"></li><a class="mg-20">Silver</a><input class="color-check" style="margin-right: 20px;" type="checkbox">
+                                    <li class="color-item" style="background-color: red; border-color: red; margin-right: 5px;"></li><a class="mg-20">Red</a><input class="color-check" style="margin-right: 20px;" type="checkbox">
+                                    <li class="color-item" style="background-color: transparent; border-color: transparent; margin-right: 5px;"></li><a class="mg-20">Transparent</a><input class="color-check" style="margin-right: 20px;" type="checkbox">
+                                    <li class="color-item" style="background-color: blue; border-color: blue; margin-right: 5px;"></li><a class="mg-20">Blue</a><input class="color-check" style="margin-right: 20px;" type="checkbox">
+                                </ul>
+                            </div>
+                            <div *ngIf="preserveFilterName=='price'" class="filter-option fadeIn">
+                                    <ul class="filter-list">
+                                        <li><input type="checkbox"></li><span>0-999</span>
+                                        <li><input type="checkbox"></li><span>1000-1999</span>
+                                        <li><input type="checkbox"></li><span>2000 & above</span>
+                                    </ul>
+                            </div>
+                </div>
+                <div style="display:flex;" class="filter-box fadeIn">
+                    <span style="cursor:pointer; margin-right: 10px;" (click)='showFilter = false'>CLEAR ALL ×</span> | 
+                    <button mat-button mat-raised-button class="apply-btn" (click)='showFilter = false'>APPLY</button>                                                                                                                                                                                                                                                                    
+                </div>
+            </div>
+</div>
+<div style="display:flex;flex-wrap: wrap; background:white;justify-content: space-around;">
+    <div *ngFor="let image of images" class="onLoad">
+        <div style="display:flex; flex-direction:column;justify-content: center;align-items: center; margin-bottom: 20px; cursor: pointer;">
+                <img [src]="image.image" width="400px" (click)="productHome(1)">
+                <ul style="list-style:none; display:flex; padding: 0px;">
+                    <li class="color-item" style="background-color:black; border-color: black; box-shadow: none; margin-right: 10px;"></li>
+                    <li class="color-item" style="background-color:grey; border-color: grey;  box-shadow: none"></li>
+                </ul>
+                <span style ="font-size: 16px;font-weight: bold; cursor: pointer" (click)="productHome(1)">{{image.id}}</span>
+                <span style="font-size: 16px; color: skyblue; font-weight: bold;">${{image.price}}</span>
+                <span style="font-size: 14px; font-weight: 500;">With BLU Smartphone Lenses</span>
+        </div>
+    </div>
+</div>
+<div *ngIf="hideViewMoreBtn" style="background: white;text-align: center; padding: 10px 0px;">
+    <button mat-button mat-raised-button class="apply-btn" (click)=viewMore()>VIEW MORE</button> 
+</div>
+<div *ngIf="viewMoreClicked" style="display:flex;flex-wrap: wrap; background:white;justify-content: space-around;">
+        <div *ngFor="let image of images" class="onLoad">
+            <div style="display:flex; flex-direction:column;justify-content: center;align-items: center;">
+                    <img [src]="image.image" width="400px">
+                    <ul style="list-style:none; display:flex; padding: 0px;">
+                        <li class="color-item" style="background-color:black; border-color: black; box-shadow: none; margin-right: 10px;"></li>
+                        <li class="color-item" style="background-color:grey; border-color: grey;  box-shadow: none"></li>
+                    </ul>
+                    <span style ="font-size: 16px;font-weight: bold;">1000363</span>
+                    <span style="font-size: 16px; color: skyblue; font-weight: bold;">$140.0</span>
+                    <span style="font-size: 14px; font-weight: 500;">With BLU Smartphone Lenses</span>
+            </div>
+        </div>
+</div>
+<div *ngIf="viewMoreClicked" style="background: white;text-align: center; padding: 10px 0px;">
+        <button mat-button mat-raised-button class="apply-btn">VIEW MORE</button> 
+</div>
+<!-- <div class="products-container">
+    <div class="sidebar">
+        <div class="title">
+            Products
+        </div>
+        <div class="list">
+            <mat-tree class="list-items" [dataSource]="dataSource" [treeControl]="treeControl">
+                <mat-tree-node *matTreeNodeDef="let node" matTreeNodePadding>
+                    <button mat-icon-button disabled></button>
+                    {{node.name}}
+                </mat-tree-node>
+                <mat-tree-node *matTreeNodeDef="let node;when: hasChild" matTreeNodePadding>
+                    <button mat-icon-button matTreeNodeToggle [attr.aria-label]="'toggle ' + node.name">
+                        <mat-icon fontSet="material-icons-outlined" class="mat-icon-rtl-mirror">
+                            {{treeControl.isExpanded(node) ? 'expand_more' : 'chevron_right'}}
+                        </mat-icon>
+                    </button>
+                    {{node.name}}
+                </mat-tree-node>
+            </mat-tree>
+        </div>
+        <br>
+        <div class="filters">
+            Price range
+            <mat-slider style="width: 100%" color="primary" tickInterval="auto" thumbLabel min="0" max="1000" step="100"
+                value="100"></mat-slider>
+        </div>
+    </div>
+    <div class="body">
+        <ng-container *ngIf="!products">
+            <mat-card class="example-card" *ngFor="let item of default">
+                <skltn-root class="example-card" duration="1000" [rectRadius]="10" flareWidth="50%" bgFill="#d8d5d1"
+                    flareFill="rgba(255,255,255, 0.5)">
+                    <div class="skltn-card">
+                        <div skltn-bone class="skltn-card__avatar" type="circle"></div>
+                        <div class="skltn-card__body">
+                            <div skltn-bone class="skltn-card__title"></div>
+                            <div skltn-bone class="skltn-card__line"></div>
+                            <div skltn-bone class="skltn-card__line"></div>
+                        </div>
+                    </div>
+                </skltn-root>
+            </mat-card>
+        </ng-container>
+        <mat-card class="example-card" *ngFor="let item of products" (click)="productHome(item.id)">
+            <div class="fab">
+                <mat-icon fontSet="material-icons-outlined">favorite_border</mat-icon>
+            </div>
+            <owl-carousel [options]="carouselOptions" [items]="item.image"
+                [carouselClasses]="['owl-theme', 'row', 'sliding']">
+                <div class="item" *ngFor="let image of item.image; let i = index">
+                    <div class="thumbnail-image">
+                        <img [src]="image" class="productImg" mat-card-image />
+                    </div>
+                </div>
+            </owl-carousel>
+            <mat-card-content>
+                <h3 style="margin: 0; font-weight: normal;">{{item.text}}</h3>
+                <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <span style="font-weight: bold; font-size: 14px;">$120.00</span>
+                    <mat-icon fontSet="material-icons-outlined">shopping_cart</mat-icon>
+                </div>
+            </mat-card-content>
+        </mat-card>
+    </div>
+</div> -->
+
+<div class="mobile" *ngFor="let item of products" (click)="productHome(item.id)">
+    <div class="mobile-card-container">
+        <div class="mobile-card-img">
+            <owl-carousel [options]="carouselOptions" [items]="item.image"
+                [carouselClasses]="['owl-theme', 'row', 'sliding']">
+                <div class="item" *ngFor="let image of item.image; let i = index">
+                    <div class="thumbnail-image">
+                        <img [src]="image" class="productImg" mat-card-image />
+                    </div>
+                </div>
+            </owl-carousel>
+        </div>
+        <div class="mobile-card-details">
+            <h3>{{item.text}}</h3>
+            <p>$120.00</p>
+        </div>
+    </div>
+    <div class="mobile-card-footer">
+        <button mat-button mat-stroked-button color="primary" class="button">
+            ADD TO CART
+        </button>
+        <button mat-button>SHARE
+        </button>
+    </div>
+</div>

@@ -1,0 +1,26 @@
+.social-img{
+  height: 30px;
+  width: 30px;
+  margin-bottom: 15px;
+  margin-right:15px;
+  border-radius: 50px;
+  box-shadow: 0 0px 6px #66615b;
+}
+.form-control:focus{
+  box-shadow: none;
+}
+.divison{
+  float: none;
+  margin: 20px 0;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  width: 100%;
+  color: #66615b;
+}
+.line{
+  border-top: 1px solid rgba(0,0,0,.2);
+  width: 100%;
+  position: relative;
+  top:14px;
+}

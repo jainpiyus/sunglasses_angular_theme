@@ -1,0 +1,123 @@
+{
+ "banner": [
+	{
+        "text": "Festive Deer",
+        "image": "http://www.mapleviewoptical.ca/wp-content/uploads/prescription-designer-sunglasses-banner.jpg"
+    },
+ 
+    {
+        "text": "Festive Deer",
+        "image": "https://cdn.shopify.com/s/files/1/1276/5299/files/Acetate_Website_Banner_1500x.jpg?v=1568381588"
+    }
+ ],
+ "products": [
+    {
+        "id": 1,
+        "text": "JPE11774 UNISEX EYEGLASSES",
+        "image": [
+          "https://cdn.shopify.com/s/files/1/1276/5299/products/G_7060_1024x.jpg?v=1568894878",
+		  "https://cdn.shopify.com/s/files/1/1276/5299/products/G_7061_1024x.jpg?v=1568894878",
+		  "https://cdn.shopify.com/s/files/1/1276/5299/products/G_7062_1024x.jpg?v=1568894878",
+		  "https://cdn.shopify.com/s/files/1/1276/5299/products/G_7063_1024x.jpg?v=1568894878"
+        ]
+      },
+      {
+        "id": 2,
+        "text": "Festive Deer",
+        "image": [
+          "http://pngimg.com/uploads/sunglasses/sunglasses_PNG150.png",
+          "http://pngimg.com/uploads/sunglasses/sunglasses_PNG95.png"
+        ]
+      },
+      {
+        "id": 3,
+        "text": "Morning Greens",
+        "image": [
+          "https://i.pinimg.com/originals/9b/68/4b/9b684bfc5e4bd28ad4283038632bff6d.png"
+        ]
+      },
+      {
+        "id": 4,
+        "text": "Everfresh Flowers",
+        "image": [
+          "http://pngimg.com/uploads/sunglasses/sunglasses_PNG62.png"
+        ]
+      },
+      {
+        "id": 5,
+        "text": "Festive Deer",
+        "image": [
+          "https://i.pinimg.com/originals/c6/39/e2/c639e2ed36e9b26437194c4ac103673b.png"
+        ]
+      },
+      {
+        "id": 6,
+        "text": "Everfresh Flowers",
+        "image": [
+          "https://www.pngix.com/pngfile/middle/184-1849415_maui-jim-sunglasses-png-image-transparent-background-ray.png"
+        ]
+      },
+      {
+        "id": 7,
+        "text": "Everfresh Flowers",
+        "image": [
+          "https://i.pinimg.com/originals/9b/68/4b/9b684bfc5e4bd28ad4283038632bff6d.png",
+          "http://pngimg.com/uploads/sunglasses/sunglasses_PNG62.png"
+        ]
+      }
+ ],
+ "simillarProducts": [
+    {
+        "id": "JP630963",
+        "text": "Everfresh Flowers",
+		"price": 245,
+        "image": [
+          "https://cdn.shopify.com/s/files/1/1276/5299/products/g_0111_480x.jpg?v=1568378285",
+          "http://pluspng.com/img-png/sunglass-png-trendy-sunglasses-prescription-sunglasses-1024.png"
+        ]
+      },
+      {
+        "id": "JP630963",
+        "text": "Festive Deer",
+		"price": 146,
+        "image": [
+          "https://cdn.shopify.com/s/files/1/1276/5299/products/1_8f19a067-4ebe-4c23-9bde-a65d0818e0f4_480x.jpg?v=1546410357",
+          "http://pngimg.com/uploads/sunglasses/sunglasses_PNG95.png"
+        ]
+      },
+      {
+        "id": "JP630963",
+        "text": "Morning Greens",
+		"price": 125,
+        "image": [
+          "https://cdn.shopify.com/s/files/1/1276/5299/products/1_eb74f337-dc7b-4b04-ba8f-2bb40437ce09_480x.JPG?v=1568795292"
+        ]
+      }
+ ],
+ "cart": [
+    {
+        "id": 306189,
+        "text": "Everfresh Flowers",
+		"price": 1299,
+        "image": [
+          "https://cdn.shopify.com/s/files/1/1276/5299/products/1_b0a46754-a3cf-4f56-901e-328a4dbce265_300x.jpg?v=1547817485"
+        ]
+      },
+      {
+        "id": 245890,
+        "text": "Festive Deer",
+		"price": 2899,
+        "image": [
+          "https://cdn.shopify.com/s/files/1/1276/5299/products/g_0358_300x.jpg?v=1568887058"
+        ]
+      },
+      {
+        "id": 100363,
+        "text": "Morning Greens",
+		"price": 1599,
+        "image": [
+          "https://cdn.shopify.com/s/files/1/1276/5299/products/G_2081_300x.jpg?v=1560834388"
+        ]
+      }
+ ]
+}

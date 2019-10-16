@@ -1,0 +1,84 @@
+<div class="profile-container">
+    <div class="sidebar">
+        <div class="profile">
+            <table>
+                <tr>
+                    <td>
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvUSsKmg8eAXt7AMn4YNFMLROT_yLtb3kKjatqSL3FGTWkcxTC"
+                            height="50px" width="50px">
+                    </td>
+                    <td style="padding-left: 15px;">
+                        <span>Hello,</span>
+                        <h3 style="margin: 0">Piyush Jain</h3>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="settings">
+            <div class="list">
+
+                <div class="left-icon contain">
+                    <mat-icon fontSet="material-icons-outlined" class="black-color">next_week</mat-icon>
+                </div>
+                <div class="title contain">
+                    MY ORDERS
+                </div>
+                <div class="right-icon contain">
+                    <mat-icon fontSet="material-icons-outlined" class="black-color">chevron_right</mat-icon>
+                </div>
+            </div>
+            <div class="list">
+
+                <div class="left-icon contain">
+                    <mat-icon fontSet="material-icons-outlined" class="black-color">person</mat-icon>
+                </div>
+                <div class="title contain">
+                    ACCOUNT SETTINGS
+                </div>
+                <div class="right-icon contain">
+                    <mat-icon fontSet="material-icons-outlined" class="black-color">chevron_right</mat-icon>
+                </div>
+                <div class="child-list">
+                    <ul>
+                        <li [routerLink]="['profile']" routerLinkActive="active">Personal Information</li>
+
+                        <li [routerLink]="['address']" routerLinkActive="active">Manage Address</li>
+
+                    </ul>
+                </div>
+            </div>
+            <div class="list">
+
+                <div class="left-icon contain">
+                    <mat-icon fontSet="material-icons-outlined" class="black-color">add_comment</mat-icon>
+                </div>
+                <div class="title contain">
+                    PAYMENTS
+                </div>
+                <div class="right-icon contain">
+                    <mat-icon fontSet="material-icons-outlined" class="black-color">chevron_right</mat-icon>
+                </div>
+                <div class="child-list">
+                    <ul>
+                        <li [routerLink]="['carddetails']" routerLinkActive="active">Saved Cards</li>
+
+                    </ul>
+                </div>
+            </div>
+            <div class="list">
+                <div class="left-icon contain">
+                    <mat-icon fontSet="material-icons-outlined" class="black-color">power_settings_new</mat-icon>
+                </div>
+                <div class="title contain">
+                    LOGOUT
+                </div>
+                <div class="right-icon contain">
+                    <mat-icon fontSet="material-icons-outlined" class="black-color">chevron_right</mat-icon>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="main">
+        <router-outlet></router-outlet>
+    </div>
+</div>
